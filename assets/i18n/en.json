@@ -1,0 +1,161 @@
+{
+  "HEADER":{
+    "SEARCH": {
+      "TEXT": "Search.."
+    }
+  },
+  "MENUITEMS": {
+    "USER":{
+      "POST": "Manager"
+    },
+    "MAIN": {
+      "TEXT": "-- Main"
+    },
+    "VENDOR": {
+      "TEXT": "Vendor List",
+      "LIST": {
+        "DASHBOARDRES":"Main Dashboard",
+        "DASHBOARD1": "Dashboard 1",
+        "DASHBOARD2": "Dashboard 2",
+        "DASHBOARD3": "Dashboard 3"
+      }
+    },
+    "HOME": {
+      "TEXT": "Home",
+      "LIST": {
+        "DASHBOARDRES":"Main Dashboard",
+        "DASHBOARD1": "Dashboard 1",
+        "DASHBOARD2": "Dashboard 2",
+        "DASHBOARD3": "Dashboard 3"
+      }
+    },
+    "BIAS": {
+      "TEXT": "Bias",
+      "LIST": {
+        "DASHBOARDRES":"Bias Summary",
+        "SUMMARY": "Summary",
+        "DASHBOARD1": "Bias Metrics",
+        "DASHBOARD2": "Feature-wise Analytics"
+      }
+    },
+    "TPRM": {
+      "TEXT": "AI TPRM",
+      "LIST": {
+        "DASHBOARDRES":"Risk Register",
+        "DASHBOARD1": "Assessment",
+        "DASHBOARD2": "AI TPRM Report",
+        "FormList":"Scoping"
+      }
+    },
+    "MLOPS": {
+      "TEXT": "MLOps",
+      "LIST": {
+        "DASHBOARDRES":"Data Quality",
+        "DASHBOARD1": "Data Drift",
+        "DASHBOARD2": "Target Drift",
+        "OUTLAYER":"Outlier Detection",
+        "ALERT": "Alerts"
+      }
+    },
+    "COMPLAINCE": {
+      "TEXT": "AI Compliance",
+      "LIST": {
+        "Regulation":"Regulation",
+        "Risk": "Risk Register",
+        "report": "Report",
+        "NYC": "NYC",
+        "NYCR": "NYC Report"
+
+
+      }
+    },
+    "EXPLAINABILITY": {
+      "TEXT": "AI Explainability",
+      "LIST": {
+        "EDA":"EDA",
+        "SUMMARY":"Summary",
+        "PERFORMANCE": "Performance",
+        "EXPLAINABILITY": "Explainability",
+        "whatif": "\"What-if\" Analysis"
+
+      }
+    },
+    "HELP": {
+      "TEXT": "Help",
+      "LIST": {
+        "USERMANUAL":"User Manual",
+        "FAQ": "FAQ",
+        "CONTACT": "Contact Details",
+        "PRIVACY": "Privacy Policy"
+      }
+    },
+    "ADVANCE-TABLE": {
+      "TEXT": "Advance Table"
+    },
+    "ROBUSTESS": {
+      "TEXT": "Robustness"
+    },
+    "MONITORING": {
+      "TEXT": "ML Monitoring"
+    },
+ 
+    "APPS": {
+      "TEXT": "-- Apps"
+    },
+    "CALENDAR": {
+      "TEXT": "Calendar"
+    },
+    "TASK": {
+      "TEXT": "Task"
+    },
+    "CONTACTS": {
+      "TEXT": "Contacts"
+    },
+    "EMAIL": {
+      "TEXT": "Email",
+      "LIST": {
+        "INBOX": "Inbox",
+        "COMPOSE": "Compose",
+        "READ": "Read Email"
+      }
+    },
+    "MORE-APPS": {
+      "TEXT": "More Apps",
+      "LIST": {
+        "CHAT": "Chat",
+        "SUPPORT": "Support",
+        "DRAG-DROP": "Drag & Drop",
+        "CONTACT-GRID": "Contact Grid"
+      }
+    },
+    "COMPONENTS": {
+      "TEXT": "-- Components"
+    },
+    "WIDGETS": {
+      "TEXT": "Widgets",
+      "LIST": {
+        "CHART-WIDGET": "Chart-Widget",
+        "DATA-WIDGET": "Data-Widget"
+      }
+    },
+    "FORMS": {
+      "TEXT": "Forms",
+      "LIST": {
+        "CONTROLS": "Form Controls",
+        "ADVANCE": "Advance Control",
+        "EXAMPLE": "Form Examples",
+        "VALIDATION": "Form Validation",
+        "WIZARD": "Wizard",
+        "EDITORS": "Editors"
+      }
+    },
+    "TABLES": {
+      "TEXT": "Tables",
+      "LIST": {
+        "BASIC": "Basic Tables",
+        "MATERIAL": "Material Tables",
+        "NGX-DATATABLE": "NGX-Datatable"
+      }
+    }
+  }
+}
