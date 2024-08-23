@@ -212,12 +212,12 @@ class Contact {
     }
 }
 Contact.ɵfac = function Contact_Factory(t) { return new (t || Contact)(); };
-Contact.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Contact, selectors: [["app-contact"]], decls: 37, vars: 0, consts: [[1, "content"], [2, "padding", "10px"], [1, "contact-section"], [1, "contact-detail"], ["href", "mailto:murali@sigmared.ai"], ["href", "mailto:contact@sigmared.ai"], ["href", "mailto:info@greymattermatters.nl"], ["href", "mailto:vijaya@sigmared.ai"]], template: function Contact_Template(rf, ctx) { if (rf & 1) {
+Contact.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: Contact, selectors: [["app-contact"]], decls: 37, vars: 0, consts: [[1, "content"], [2, "padding", "10px"], [1, "contact-section"], [1, "contact-detail"], ["href", "mailto:murali@sigmared.ai"], ["href", "mailto:contact@sigmared.ai"], ["href", "mailto:info@greymattermatters.nl"]], template: function Contact_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section", 0)(1, "div", 1)(2, "mat-card")(3, "mat-card-content")(4, "div", 2)(5, "h2");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, "Contact Details");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "div", 3)(8, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "Canada");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, "USA / Canada");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](11, "Email: ");
@@ -247,11 +247,11 @@ Contact.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "p");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "Email: ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "a", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "vijaya@sigmared.ai");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "a", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "contact@sigmared.ai");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "Phone: +91 78993 49778");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "Phone: +91 81155 84343");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()()()();
     } }, dependencies: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCardContent], styles: ["mat-card[_ngcontent-%COMP%] {\n  margin: 20px;\n  padding: 20px;\n  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n}\n\nmat-card-header[_ngcontent-%COMP%] {\n  background-color: #3f51b5;\n  color: white;\n}\n\n.contact-section[_ngcontent-%COMP%] {\n  display: grid;\n  gap: 10px;\n}\n\n.contact-detail[_ngcontent-%COMP%] {\n  background: #f0f0f0;\n  padding: 15px;\n  border-radius: 5px;\n  margin-top: 10px;\n}\n\n.contact-detail[_ngcontent-%COMP%]   h3[_ngcontent-%COMP%] {\n  margin-top: 0;\n}\n\na[_ngcontent-%COMP%] {\n  color: #3f51b5;\n  text-decoration: none;\n}\n\na[_ngcontent-%COMP%]:hover {\n  text-decoration: underline;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbnRhY3QuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxZQUFBO0VBQ0EsYUFBQTtFQUNBLHdDQUFBO0FBQ0o7O0FBRUU7RUFDRSx5QkFBQTtFQUNBLFlBQUE7QUFDSjs7QUFFRTtFQUNFLGFBQUE7RUFDQSxTQUFBO0FBQ0o7O0FBRUU7RUFDRSxtQkFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0FBQ0o7O0FBRUU7RUFDRSxhQUFBO0FBQ0o7O0FBRUU7RUFDRSxjQUFBO0VBQ0EscUJBQUE7QUFDSjs7QUFFRTtFQUNFLDBCQUFBO0FBQ0oiLCJmaWxlIjoiY29udGFjdC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIm1hdC1jYXJkIHtcbiAgICBtYXJnaW46IDIwcHg7XG4gICAgcGFkZGluZzogMjBweDtcbiAgICBib3gtc2hhZG93OiAwIDRweCA4cHggcmdiYSgwLDAsMCwwLjEpO1xuICB9XG4gIFxuICBtYXQtY2FyZC1oZWFkZXIge1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMzZjUxYjU7XG4gICAgY29sb3I6IHdoaXRlO1xuICB9XG4gIFxuICAuY29udGFjdC1zZWN0aW9uIHtcbiAgICBkaXNwbGF5OiBncmlkO1xuICAgIGdhcDogMTBweDtcbiAgfVxuICBcbiAgLmNvbnRhY3QtZGV0YWlsIHtcbiAgICBiYWNrZ3JvdW5kOiAjZjBmMGYwO1xuICAgIHBhZGRpbmc6IDE1cHg7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIG1hcmdpbi10b3A6IDEwcHg7XG4gIH1cbiAgXG4gIC5jb250YWN0LWRldGFpbCBoMyB7XG4gICAgbWFyZ2luLXRvcDogMDtcbiAgfVxuICBcbiAgYSB7XG4gICAgY29sb3I6ICMzZjUxYjU7XG4gICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICB9XG4gIFxuICBhOmhvdmVyIHtcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgfVxuICAiXX0= */"] });
 

@@ -644,11 +644,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/environments/environment */ 92340);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rxjs */ 76317);
 /* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs */ 59346);
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs */ 90833);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ 58987);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/core */ 22560);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common */ 94666);
-/* harmony import */ var _auth0_auth0_angular__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @auth0/auth0-angular */ 89226);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/core */ 22560);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common */ 94666);
+/* harmony import */ var _auth0_auth0_angular__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @auth0/auth0-angular */ 89226);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/common/http */ 58987);
 /* harmony import */ var _layout_page_loader_page_loader_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./layout/page-loader/page-loader.component */ 66105);
 
 
@@ -677,7 +676,6 @@ class AppComponent {
       domain: src_environments_environment__WEBPACK_IMPORTED_MODULE_2__.environment.domain,
       clientId: src_environments_environment__WEBPACK_IMPORTED_MODULE_2__.environment.clientId
     });
-    this.token = `${src_environments_environment__WEBPACK_IMPORTED_MODULE_2__.environment.token}`;
     this.refreshedToken$ = (0,rxjs__WEBPACK_IMPORTED_MODULE_5__.from)(this.auth0.getTokenSilently());
     this._router.events.subscribe(routerEvent => {
       if (routerEvent instanceof _angular_router__WEBPACK_IMPORTED_MODULE_6__.NavigationStart) {
@@ -693,23 +691,6 @@ class AppComponent {
     this.currentRole = value;
     // localStorage.setItem("currentRole", value);
     // console.log("role updated", this.currentRole);
-  }
-  getRoles(userId) {
-    const url = `https://sigmared.us.auth0.com/api/v2/users/${userId}/roles`;
-    const headers = new _angular_common_http__WEBPACK_IMPORTED_MODULE_7__.HttpHeaders({
-      Authorization: `Bearer ${this.token}`
-    });
-    return new rxjs__WEBPACK_IMPORTED_MODULE_8__.Observable(observer => {
-      this.http.get(url, {
-        headers
-      }).subscribe(response => {
-        const names = response.map(obj => obj.name);
-        this.currentRole = names[0];
-        observer.next(this.currentRole);
-        observer.complete();
-        this.setCurrentRole(this.currentRole);
-      });
-    });
   }
   ngOnInit() {
     var _this = this;
@@ -733,36 +714,25 @@ class AppComponent {
           _this.auth.user$.subscribe(user => {
             _this.user = user;
             console.log("user", _this.user);
-            _this.getRoles(_this.user?.sub).subscribe( /*#__PURE__*/function () {
-              var _ref2 = (0,_home_azureuser_Responsible_Angular_node_modules_babel_runtime_helpers_esm_asyncToGenerator_js__WEBPACK_IMPORTED_MODULE_0__["default"])(function* (currentRole) {
-                _this.currentRole = currentRole;
-                console.log("currentRole:", currentRole);
-                _this.verified = _this.user?.email_verified;
-                _this.verifiedSubject.next(_this.verified);
-                if (_this._router.url !== "/authentication/signin") {
-                  localStorage.setItem("lastVisitedUrl", _this._router.url);
+            _this.verified = _this.user?.email_verified;
+            if (_this._router.url !== "/authentication/signin") {
+              localStorage.setItem("lastVisitedUrl", _this._router.url);
+            }
+            _this.verifiedSubject.next(_this.verified);
+            _this.verifiedSubject.subscribe(verified => {
+              console.log("verified:", verified);
+              const lastVisitedUrl = localStorage.getItem("lastVisitedUrl");
+              if (verified === true && _this._router.url === "/authentication/signin") {
+                if (lastVisitedUrl && lastVisitedUrl !== "/") {
+                  _this._router.navigateByUrl(lastVisitedUrl);
+                } else {
+                  _this._router.navigate(["/dashboard/mainRes"]);
                 }
-                _this.verifiedSubject.subscribe(verified => {
-                  console.log("verified:", verified);
-                  const lastVisitedUrl = localStorage.getItem("lastVisitedUrl");
-                  if (verified === true && _this._router.url === "/authentication/signin") {
-                    if (lastVisitedUrl && lastVisitedUrl !== "/") {
-                      _this._router.navigateByUrl(lastVisitedUrl);
-                    } else {
-                      _this._router.navigate(["/dashboard/mainRes"]);
-                    }
-                  } else {
-                    if (_this._router.url === "/authentication/signin" && !_this.verified) {
-                      _this._router.navigate(["/authentication/signin"]);
-                    }
-                  }
-                });
-              });
-              return function (_x2) {
-                return _ref2.apply(this, arguments);
-              };
-            }(), error => {
-              console.error("Failed to get user roles:", error);
+              } else {
+                if (_this._router.url === "/authentication/signin" && !_this.verified) {
+                  _this._router.navigate(["/authentication/signin"]);
+                }
+              }
             });
           });
           try {
@@ -788,16 +758,16 @@ class AppComponent {
   }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) {
-  return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_6__.Router), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_10__.PlatformLocation), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_auth0_auth0_angular__WEBPACK_IMPORTED_MODULE_11__.AuthService), _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_7__.HttpClient));
+  return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_6__.Router), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_8__.PlatformLocation), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_auth0_auth0_angular__WEBPACK_IMPORTED_MODULE_9__.AuthService), _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_10__.HttpClient));
 };
-AppComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵdefineComponent"]({
+AppComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵdefineComponent"]({
   type: AppComponent,
   selectors: [["app-root"]],
   decls: 2,
   vars: 0,
   template: function AppComponent_Template(rf, ctx) {
     if (rf & 1) {
-      _angular_core__WEBPACK_IMPORTED_MODULE_9__["ɵɵelement"](0, "app-page-loader")(1, "router-outlet");
+      _angular_core__WEBPACK_IMPORTED_MODULE_7__["ɵɵelement"](0, "app-page-loader")(1, "router-outlet");
     }
   },
   dependencies: [_angular_router__WEBPACK_IMPORTED_MODULE_6__.RouterOutlet, _layout_page_loader_page_loader_component__WEBPACK_IMPORTED_MODULE_3__.PageLoaderComponent],
